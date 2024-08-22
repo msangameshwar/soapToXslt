@@ -1,0 +1,4235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sar="http://schemas.datacontract.org/2004/07/SarvSurakshaPlusInsurancePolicy_HDFCERGO_WCFService"
+    xmlns:ins="http://schemas.datacontract.org/2004/07/InstallmentBL"
+    xmlns:log="http://schemas.datacontract.org/2004/07/LOGON"
+    xmlns:arr="http://schemas.microsoft.com/2003/10/Serialization/Arrays"
+    xmlns:gen="http://schemas.datacontract.org/2004/07/GeneralServiceBL"
+    xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+    xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+    xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tns="http://tempuri.org/"
+    xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+    xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+    xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+    xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+    xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+    xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+    xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+    xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" version="1.0">
+
+    <xsl:output encoding="utf-8" indent="yes" method="xml" omit-xml-declaration="yes" />
+
+    <!-- Stylesheet to inject namespaces into a document in specific places -->
+
+    <xsl:template match="node()">
+        <xsl:copy>
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:copy>
+    </xsl:template>
+
+
+    <!-- template to copy attributes -->
+    <xsl:template match="@*">
+        <xsl:attribute name="{local-name()}">
+            <xsl:value-of select="." />
+        </xsl:attribute>
+    </xsl:template>
+
+
+    <!-- start -->
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:CustomPropertyCollection">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:CustomPropertyCollection/tns:CustomProperty">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:CustomPropertyCollection/tns:CustomProperty/tns:CustPropertyKey">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:CustomPropertyCollection/tns:CustomProperty/tns:CustPropertyValue">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:ErrorTrackingNeeded">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:ProductType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropBranchDetails_IMDBranchCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropBranchDetails_IMDBranchName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCalculate_AddRow">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCalculate_ValidateData">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropClauseDetails_DepartmentCode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropClauseDetails_ProductCode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoinsuranceDetails_AddRow">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoinsuranceDetails_CoinsuranceType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoinsuranceDetails_Commission">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoinsuranceDetails_ReferenceNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoinsuranceDetails_Validate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropConditionDetails_DepartmentCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropConditionDetails_ProductCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropConditionDetails_SpecialConditionDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverDetails_cvrCreditLink">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_CoverNoteBookNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_CoverNoteLeafNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_IssuedOnDt">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_IsuedonTime">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_LeafNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_RecievedOn">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCoverNoteDetails_Validate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerDtls_CustomerID_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerDtls_CustomerName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerDtls_PayeeCustomerID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerDtls_PayeeCustomerName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerReferenceInfo_OldPolicyNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropCustomerReferenceInfo_PolicyConversionDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_BranchDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_Commision">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_EndorsementDtls">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_IntermediaryDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_MODetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_OperationMode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_SPDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_ServiceProvider">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_SpecialDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_Validate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropDistributionChannel_VerticalDtls">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropEndorsementDtls_EndorsementTypeCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropEndorsementDtls_TypeofEndorsement">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropEndorsementEffectiveDate_EffectiveDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropEndorsementEffectiveDate_EffectiveTime">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropExclusionDetails_DepartmentCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropExclusionDetails_ProductCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropFinancierDetails_AddRow">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropFinancierDetails_Validate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalGroup_CoverNoteDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalGroup_DistributionChannel">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalGroup_GeneralProposalInformation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ActiveFlag">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ApplicationNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_BankID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_BranchOfficeCode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_BusinessSourceInfo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_BusinessType_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CertificateNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ChannelNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CoInsuranceApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ConsentLetterID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CoverType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CovernoteGenType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CustomerDtls">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_CustomerReferenceInfo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_DateofUndertaking">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_DepartmentCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_DepartmentName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EmployeeName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementEffectiveDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementRequestType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementRequestTypeCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementSi">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_EndorsementWording">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_IndustryCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_InwardNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_IsPortabilityApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ManualCovernoteNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ManualProposalNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_MasterPolicynumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_MethodOfCalculation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ModeOperation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ModeofOperation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_NextB">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_NoPrevInsuranceFlag">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_NoPreviousPolicyDetail">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_NumCovernoteNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_OffLineUniqueID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_OfficeCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_OfficeName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_OldCovernoteNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_PolicyCancellationReason">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_PolicyEffectivedate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_PolicyNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_PolicyNumberChar">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProductCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProductName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProductType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_Product_Code">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProposalDate_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProvisionalBooking2">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ProvisionalBookingReason">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_RateEffectiveDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ReferenceNoDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ReferralCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_RejectionLetterID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_Remarks">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_RenewalNoticeDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_RenewalRatesAsOn">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_RetainCancellationPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_Sector_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_SerialNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_ServiceTaxExemptionCategory_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_TotalSi">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_TypeOfBusiness">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_TypeOfCalculation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_TypeOfIndustry">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_TypeOfPolicy">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_VehicleLaidUpFrom">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposalInformation_VehicleLaidUpTo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_ClauseCode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_ClauseNumber_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_ClauseShortDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_ClauseType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_Default_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ClauseDetails_Col/tns:GeneralProposal_ClauseDetails/tns:PropClauseDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_CompanyShortDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_CorporateCustomerId">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_LeaderNonleader">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_OfficeCustomerId">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_CoinsuranceDetails_Col/tns:GeneralProposal_CoinsuranceDetails/tns:PropCoinsuranceDetails_Share">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_ConditionCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_ConditionNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_ConditionShortDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_ConditionType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_Default">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ConditionDetails_Col/tns:GeneralProposal_ConditionDetails/tns:PropConditionDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_Default">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_ExclusionCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_ExclusionNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_ExclusionShortDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_ExclusionType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_ExclusionDetails_Col/tns:GeneralProposal_ExclusionDetails/tns:PropExclusionDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_AgreementType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_BranchName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_FinancierCode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_FinancierName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_FinancierDetails_Col/tns:GeneralProposal_FinancierDetails/tns:PropFinancierDetails_SrNo_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_GeneralProposalGroup">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_ClaimAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_ClaimNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_ClaimPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_ClaimSettled">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_CorporateCustomerId_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_DateofLoss">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_NCBPercentage">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_NatureofLoss">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_OfficeCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_PolicyEffectiveFrom">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_PolicyEffectiveTo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_PolicyNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_PolicyPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_PolicyYear_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_PreviousPolicyDetails_Col/tns:GeneralProposal_PreviousPolicyDetails/tns:PropPreviousPolicyDetails_ProductCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_Default_Val">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_WarrantyCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_WarrantyNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_WarrantyShortDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropGeneralProposal_Warranty_Col/tns:GeneralProposal_Warranty/tns:PropWarranty_WarrantyType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropHigherExcessDiscount_HE_Disc_RateType_In">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropIntermediaryDetails_IntermediaryCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropIntermediaryDetails_IntermediaryName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropIntermediaryDetails_IntermediaryType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_Applicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_CalculatedAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_Description">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_DifferentialSI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_EndorsementAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_FixedAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_Premium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_Rate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLoadingDiscount_Col/tns:LoadingDiscount/tns:PropLoadingDiscount_SumInsured">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLocationCode_LocationDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropLocationCode_Location_Code">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_PrimaryMOCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_PrimaryMOName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_SecondaryMOCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_SecondaryMOName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_TertiaryMOCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropMODetails_TertiaryMOName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_AddClause">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_AddCondition">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_AddExclusion">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_AddWarranty">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_AfterFetch">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ClauseApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_CoInsuranceApplicability">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_CommissionApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ConditionApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_CoverNoteApplicability">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_EQHigherExcessDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ExclusionApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_FamilyPackageDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_FinancierApplicability">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_FloaterRiskLoading">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_GroupDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_HighClaimLoading">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_HigherExcessDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_Installment">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_LongTermPolicy">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_LowClaimDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_MinimumPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_NoClaimDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_OverageLoading">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_PastpolicyApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_PolicyCancellation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_PopulateTransactionBegin">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_RenewalAllowed">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_SectionDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ServiceTaxExempted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ShortPeriodLongPeriod">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_SpecialDiscountApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_StaffDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_StampDutyChargeable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_TariffProduct">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_TransferFees">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_VDFDiscountAllowed">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ValidateClause">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ValidateCondition">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ValidateEndorsementData">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ValidateExclusion">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_ValidateWarranty">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropParameters_WarrentyApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPolicyEffectivedate_Fromdate_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPolicyEffectivedate_Fromhour_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPolicyEffectivedate_Todate_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPolicyEffectivedate_Tohour_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_BasicPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_Cess">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_ERFAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_EndorsementERFAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_EndorsementPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_EndorsementServiceTax">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_EndorsementStampDuty">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_EndorsementTerrorismPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_NetPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_SP_PR_LTFactor">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_SalesTax">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_ServiceTax">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_StampDuty2">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_StampDutyApplicability">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_TerrorismPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPremiumCalculation_TotalPremium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_AddRow">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_CalculateClaimRatio">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_ClaimRatio">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_OfficeAddress">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_PreviousPolicyType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropPreviousPolicyDetails_Validate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropProductName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropReferenceNoDate_ReferenceDate_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropReferenceNoDate_ReferenceNo_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_AdditionalChild">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Amount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Amounts">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Annual_Income">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:IsOptionalCover">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_AdditionDateofInsured">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Age_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_AggrDeductible">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Amountss">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_AnnualIncome">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_AppointeeName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_AppointeeRelationship">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_BodyMassIndex">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CBLimit">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CB_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CB_Percent">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_AmountPerDayWeek">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_AnnualcappingofEMI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Applicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CarpetArea">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CostOfConstruction">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CoverCategory">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CoverGroups">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CoverName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CoverValue">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CoverValueType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Cover_Description">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Cover_deductible">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Cvr80Dapplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_CvrSItype">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_DeductibleType">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_DifferentialSI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_EMIAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_EndorsementAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_FixedAmountTriggerdays">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_FractionofEMI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Linkedtype">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_NoOfDaysMonths">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_NoofPayoutPeryear">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Pertriggerpayout">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Premium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Rate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_Roomrentpercent">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_SumInsured">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_claimtypes">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CoverDetails_Col/tns:Risks_CoverDetails/tns:PropCoverDetails_countofEMI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_CreditScore">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DateOfBirth_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Dependent">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_Applicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_CalculatedAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_Description">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_DifferentialSI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_EndorsementAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_FixedAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_Information">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_Premium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_Rate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DetailLoadingDiscount_Col/tns:Risks_DetailLoadingDiscount/tns:PropDetailLoadingDiscount_SumInsured">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_DifferentialSI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_ECBMemberId">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_EMILoanAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_EndorsementAmount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_ExpirySI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_HeightINcms">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Hypertension">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_IndSumInsured">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_IsDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_IsDiabetic">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_IsOldDataDeleted">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_LoanAmountshare">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_MaritalStatus">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_MemberEntryDate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_MemberID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_MonthlyEMIAmountRisks">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Name_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_NoOfLoanRisks">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Nominee">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_NomineeAge">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_NomineeDOB">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_NomineeRelation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_NoofDependent">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Occupation">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Person">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_PortabilityApplicable">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_PreExistingDefect">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Premium">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Rate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Relation_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Salaried">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_SerialNo">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Sex_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Sharepercentage">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Smoker">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_Ssp80Dcertificate">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_SumInsured_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_UniqueID">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Col/tns:Risks/tns:PropRisks_WeightINkgs">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Creditlinked">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Deductible">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Description">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_FamilyFloater">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_FamilyPolicy">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_FinancierName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_GoGreen">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_HospitalDailyCash">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_IndividualPolicy">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_IsPortabilityApp">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Loanamount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Loantenure">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_LocationCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_LocationDescription">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Marital">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_MasterPolicyNumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_MonthlyEMIamount">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_NoOfParents">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_NoofDays">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_NoofLoanEMI">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Plannumber">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Policyperiod">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product252">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product253">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product254">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product255">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product265">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product270">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product607">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product695">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product807">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product808">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_Product_Code">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_QCParentsFlag">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_RateEffective">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_RiskAddress">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_RiskAddressPIN">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_SubRiskCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_SumInsuredtype">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_TPACode_Mandatary">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_TPAName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropRisks_TypeOfPolicy">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropSPDetails_SPCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropSPDetails_SPName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropServiceTaxExemptionCategory_Component43">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_PrimaryVerticalCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_PrimaryVerticalName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_SecondaryVerticalCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_SecondaryVerticalName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_TertiaryVerticalCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropVerticalDtls_TertiaryVerticalName">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropWarranty_DepartmentCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:PropWarranty_ProductCode">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:PROP_INSTPAYSTATUS_STRING">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ADDITIONALENDTCOLLECT">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BASICSERVICETAX">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BasicPremium">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BasicRefundAmt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BasicSTaxRefundAmt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BillingType">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_BlockID">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_CESS">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_CURRENCYCODE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_CURRENCYSEQID">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_CommissionRate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_CurrencyName">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_DATINSTDATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_DATINSTENDDATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_DATINSTSTDATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_DownPayment">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ENDORSEMENTTYPECODE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_EXCHANGERATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_EndtAmnt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_EndtEffDat">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ErrorMsg">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_GRACEENDDATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_HIGHEDUCESS">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTAMT">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTGOINGTOCOLL">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTGOINGTOCOLLBool">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTINFO1">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTINFO2">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTINFO3">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTINFO4">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTINFO5">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTMODE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTPARENTID">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTPAYSTATUS">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_INSTREFUNDAMT">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ISREINSTATEMENT">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstDueDate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstId">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstInterval">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstPlanCode">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstSeqid">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstTotalAmount">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstTotalPremium">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_InstType">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_IsMultiBlock">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_LAPSEENDDATE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_MODIFYTRANSID">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_NONLIABLETO">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_NetPremium">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_PENALTYAMOUNT">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_Percentage">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_PolicyEndDate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_PolicyStDate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_PolicyTerm">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ProductCode">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_REMARKS">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ReferenceDate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ReferenceNo">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_SERVICETAX">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_STAMPDUTY">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_STATUS">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_SUMINSURED">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ServTaxExcemCatagory">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_ServiceTaxRate">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TERRORISMSERVICETAX">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TerrorismPremium">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TerrorismRefundAmt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TerrorismSTaxRefundAmt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TotalInstallment">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TotalSTaxRefundAmt">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TransID">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_TransTime">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:Prop_UniqueIdentifier">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:SearchByInstallmentDateFrom">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:SearchByInstallmentNumberFrom">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+<xsl:template
+match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentSchedule_Col/tns:Risks_Installment/tns:prop_INSTISACTIVE">
+<xsl:element name="ins:{local-name()}">
+    <xsl:apply-templates select="node()|@*" />
+</xsl:element>
+</xsl:template>
+
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentUserData">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentUserData/tns:InstallmentUserData">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentUserData/tns:InstallmentUserData/tns:PropInst_BlockID">
+        <xsl:element name="ins:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentUserData/tns:InstallmentUserData/tns:PropInst_CURRENCYCODE">
+        <xsl:element name="ins:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_InstallmentUserData/tns:InstallmentUserData/tns:PropInst_IsMultiBlock">
+        <xsl:element name="ins:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult">
+        <xsl:element name="sar:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:ErrorText">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:CTRLValue">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:DropDownValues">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:DropDownValues/tns:string">
+        <xsl:element name="arr:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:IsConditionalDefaultValueChanged">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:OtherDetailsDataColumnCollection">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:OtherDetailsDataColumnCollection/tns:OtherDetailsDataColumn">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:OtherDetailsDataColumnCollection/tns:OtherDetailsDataColumn/tns:ColumnName">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVUserData/tns:Prop_OtherDetailsResult/tns:OtherDetailsServiceResult/tns:OtherDetailsDataRowCollection/tns:OtherDetailsDataRow/tns:OtherDetailsDataColumnCollection/tns:OtherDetailsDataColumn/tns:ColumnValue">
+        <xsl:element name="log:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:AuthToken">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:BlockId">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:CancellationNotice">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:ClientApprovalState">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:EndorsementSubType">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:BasicPremium">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:BlockID">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:CurrencyCode">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:ExchangeRate">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:NetPremium">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:SectionID">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IndividualPremiumDetails/tns:TotalSI">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsNewPolicyModifyBlock">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsNewProposalFetch">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsOptinalServiceRunsIndependent">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsPackageNewProposalFetch">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsSaveMode">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:IsSaveOnWarning">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:ModeOfOperation">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:NewPolicyModifyBlkId">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:NextButtonLogicRequired">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:BasicPremium">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:BlockID">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:CurrencyCode">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:ExchangeRate">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:NetPremium">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:SectionID">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:PolicyPremiumDetails/tns:IndividualPremiumDetailsArray/tns:IndividualPremiumDetails/tns:TotalSI">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:ProductCode">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:ReferenceNumber">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:RenewalNotice">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:SaveAsQuote">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:ServiceContext">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:TransactionId">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:TransactionLockId">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:TransactionTime">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:UserRole">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:WorkSheetRequired">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template
+        match="/soapenv:Envelope/soapenv:Body/tns:CreateNewProposal/tns:objLVGeneralServiceAppData/tns:blnFirstTimePageLoadAfterFetch">
+        <xsl:element name="gen:{local-name()}">
+            <xsl:apply-templates select="node()|@*" />
+        </xsl:element>
+    </xsl:template>
+
+    <!-- end -->
+    <!-- template to copy the rest of the nodes -->
+    <xsl:template match="comment() | processing-instruction()">
+        <xsl:copy />
+    </xsl:template>
+
+
+</xsl:stylesheet>
